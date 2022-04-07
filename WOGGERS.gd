@@ -29,10 +29,10 @@ func _input(event):
             velocity.y = -jump_strength
             
         elif event.scancode == KEY_UP or event.scancode == KEY_DOWN:
-            gravity += (1 if event.shift else 0.1) * (1 if event.scancode == KEY_UP else -1)
+            gravity += (0.1 if event.shift else 1) * (1 if event.scancode == KEY_UP else -1)
             
         elif event.scancode == KEY_LEFT or event.scancode == KEY_RIGHT:
-            jump_strength += (1 if event.shift else 0.1) * (1 if event.scancode == KEY_RIGHT else -1)
+            jump_strength += (0.1 if event.shift else 1) * (1 if event.scancode == KEY_RIGHT else -1)
             
         else:
             return
